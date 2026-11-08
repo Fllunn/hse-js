@@ -76,6 +76,12 @@ input {
   border-radius: 100px;
   background-color: transparent;
   cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: center;
+
   /* плавный переход */
   transition: transform 0.2s ease;
 }
@@ -136,4 +142,10 @@ input:focus-visible {
 .button-socials:hover {
   /* увеличивает кнопку на 5% */
   transform: scale(1.05);
+}
+
+.button-icon {
+  margin: 0;
+  padding: 0;
+  height: 24px;
 }
