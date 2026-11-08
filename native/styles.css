@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Unbounded';
+  src: url('assets/fonts/Unbounded-VariableFont_wght.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Unbounded', sans-serif;
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* для смены темы */
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+

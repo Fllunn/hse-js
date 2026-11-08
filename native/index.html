@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Форма входа</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./index.js" defer></script>
+  </head>
+  
+  <body>
+    <header class="header">Шапка</header>
+    <main class="main">
+      <section class="card">
+        <h1 class="card-header">С возвращением!</h1>
+
+        <form class="form" id="login-form">
+
+          <label for="email">Электронная почта</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="password">Пароль</label>
+          <input type="password" id="password" name="password" required>
+
+          <div class="checkbox">
+            <input type="checkbox" id="remember" name="remember">
+            <label for="remember">Запомнить меня</label>
+          </div>
+
+          <button type="submit">Войти</button>
+
+        </form>
+
+        <p class="divider">или</p>
+
+        <ul class="socials">
+          <li><button type="button" id="google-button">Войти через Google</button></li>
+          <li><button type="button" id="apple-button">Войти через Apple</button></li>
+        </ul>
+
+        <p>Нет аккаунта? <a href="#">Зарегистрироваться</a></p>
+        
+      </section>
+    </main>
+    <footer class="footer">Подвал</footer>
+  </body>
+
+</html>
