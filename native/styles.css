@@ -9,8 +9,20 @@
 body {
   font-family: 'Unbounded', sans-serif;
   margin: 0;
+  padding: 0;
   background-color: var(--bg);
   color: var(--text);
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* для смены темы */
@@ -25,3 +37,76 @@ body {
   gap: 8px;
 }
 
+.card {
+  width: 100%;
+  max-width: 500px;
+}
+
+input {
+  /* в самом инпуте делает шрифт родительский */
+  font-family: inherit;
+
+  padding: 8px;
+  border: 1px solid;
+  border-radius: 4px;
+}
+
+.button-login {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+  border-radius: 100px;
+  background-color: #1ed760;
+  color: #000000;
+  cursor: pointer;
+}
+
+.button-socials {
+  font-family: inherit;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px;
+  border: 1px solid;
+  border-radius: 100px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.socials {
+  /* отключает точки у списка */
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+h1 {
+  /* https://clamp.font-size.app/ */
+  font-size: clamp(1.875rem, 1.0938rem + 2.5vw, 2.5rem);
+  font-weight: 900;
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.divider {
+  text-align: center;
+  margin: 12px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+input[type="checkbox"] {
+  margin: 0;
+}
