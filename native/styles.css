@@ -36,8 +36,8 @@ body {
   --text: #ffffff;
 }
 
-/* при смене темы меняем у иконкок темы и apple цвет */
-.dark .button-theme img, .dark #apple-button img {
+/* при смене темы меняем цвета у иконок и кнопок */
+.dark .button-theme img, .dark #apple-button img, .dark .button-password img {
   filter: invert(1);
 }
 
@@ -181,4 +181,41 @@ input:focus-visible {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.password {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.password-view {
+  display: flex;
+  align-items: center;
+  /* рисуем границу у общего дива (где инпут и кнопка)
+     а потом убираем границу у инпута
+  */
+  border: 1px solid;
+  border-radius: 12px;
+}
+
+.password-view input {
+  /* отключаем границу у инпута */
+  border: none;
+  /* делаем инпут чтобы он был по всей ширине */
+  flex: 1;
+}
+
+.button-password {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  padding-right: 8px;
+  display: flex;
+}
+
+/* focus-within меняет при взаимодействии с любым элементом внутри контейнера */
+.password-view:focus-within {
+  border-color: #1ed760;
 }

@@ -3,6 +3,10 @@ const themeToggle = document.getElementById("theme-toggle")
 const app = document.documentElement
 const themeIcon = themeToggle.querySelector("img")
 
+const passwordInput = document.getElementById("password")
+const passwordButton = document.querySelector(".button-password")
+const passwordIcon = document.querySelector(".button-password img")
+
 // проверяем последнюю выбранную пользователем тему
 function chosenTheme() {
   if (localStorage.getItem("theme") === "dark") {
@@ -37,5 +41,20 @@ const themeChange = () => {
   }
 }
 
+function changePasswordType() {
+  // если сейчас тип пароль то меняем на текст
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text"
+    passwordIcon.src = "public/icons/eye-off.svg"
+  }
+  // если сейчас тип текст то меняем на пароль 
+  else {
+    passwordInput.type = "password"
+    passwordIcon.src = "public/icons/eye.svg"
+  }
+}
+
 themeToggle.addEventListener("click", themeChange)
 chosenTheme()
+
+passwordButton.addEventListener("click", changePasswordType)
