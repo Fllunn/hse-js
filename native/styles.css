@@ -236,3 +236,8 @@ input:focus-visible {
     font-size: 18px;
   }
 }
+
+.error-message {
+  color: #e91429;
+  margin: 0;
+}

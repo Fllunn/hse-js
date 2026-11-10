@@ -6,6 +6,7 @@
     <title>Форма входа</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="./index.js" defer></script>
+    <script src="./validation.js" defer></script>
   </head>
   
   <body>
@@ -19,10 +20,12 @@
       <section class="card">
         <h1 class="card-header">С возвращением!</h1>
 
-        <form class="form" id="login-form">
+        <!-- novalidate отключает валидацию браузера -->
+        <form class="form" id="login-form" novalidate>
 
           <label for="email">Электронная почта</label>
           <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+          <p class="error-message" id="email-error"></p>
 
           <div class="password">
             <label for="password">Пароль</label>
@@ -32,6 +35,7 @@
                 <img src="public/icons/eye.svg" class="button-icon">
               </button>
             </div>
+            <p class="error-message" id="password-error"></p>
           </div>
           
 
