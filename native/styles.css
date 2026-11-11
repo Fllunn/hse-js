@@ -32,11 +32,13 @@ body {
 :root {
   --bg: #ffffff;
   --text: #121212;
+  --sky: #98e5fe;
 }
 
 .dark {
   --bg: #121212;
   --text: #ffffff;
+  --sky: transparent;
 }
 
 /* при смене темы меняем цвета у иконок и кнопок */
@@ -240,4 +242,31 @@ input:focus-visible {
 .error-message {
   color: #e91429;
   margin: 0;
+}
+
+@keyframes move {
+  from {
+    left: -15vw;
+  }
+  to {
+    left: 100vw;
+  }
+}
+
+footer {
+  background-color: var(--sky);
+  height: clamp(5rem, 3.3448rem + 8.2759vw, 8rem);
+  /* убирает полосу прокрутки горизонталоьную */
+  overflow: hidden;
+  position: relative;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.cloud-icon {
+  position: absolute;
+  animation: move linear infinite;
+  /* центрируем облака по вертикали */
+  transform: translateY(-50%);
 }
